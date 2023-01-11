@@ -17,10 +17,11 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 // //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+require("dotenv").config();
 const server = require("./src/app");
-
+const {NAME} = process.env;
 // Syncing all the models at once.
 
 server.listen(3000, () => {
-  console.log(`%s listening at 3000`); // eslint-disable-line no-console
+  console.log(`%s listening at ${NAME}`); // eslint-disable-line no-console
 });
